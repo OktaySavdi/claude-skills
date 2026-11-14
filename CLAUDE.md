@@ -111,6 +111,36 @@ a skill (publishing tickets/PRs, editing settings.json) still need user confirma
 | Python | `python-patterns` / `python-testing` |
 | Helm | `helm-chart-builder` |
 | Monitoring / alerts | `observability-designer` |
+| AKS: create/plan, SKU, networking, rightsize, VPA | `azure-kubernetes` |
+| AKS incident: CrashLoop, node NotReady, DNS, quota, upgrade stuck | `aks-troubleshooting` (exact error code → `aks-known-issues`; pcap → `aks-network-capture`; NAP/bin-packing → `aks-cost-optimization`) |
+| Azure prod issue, VM/App Service/Container Apps debug, KQL | `azure-diagnostics` (+ `azure-kusto`) |
+| Azure cost: spend/bill spike → `cost-analysis`; savings/idle/RI → `cost-optimization`; budgets/tags/policy → `cost-governance`; recommendations → `azure-advisor` | see left |
+| Azure compliance, azqr, Key Vault expiry | `azure-compliance` |
+| Azure reliability, zone redundancy, DR | `azure-reliability` |
+| Azure quotas, vCPU limits, region capacity | `azure-quotas` |
+| Azure landing zone, hub-spoke, multi-region topology | `azure-enterprise-infra-planner` (+ `azure-cloud-architect`) |
+| azd / Bicep deploy: prepare → validate → deploy | `azure-prepare` → `azure-validate` → `azure-deploy` |
+| Resource inventory, Resource Graph, orphaned resources, diagrams | `azure-resource-lookup` / `azure-resource-visualizer` |
+| Azure VMs/VMSS, Storage, upgrade plan/SKU, cross-cloud → Azure | `azure-compute` / `azure-storage` / `azure-upgrade` / `azure-cloud-migrate` |
+| Entra app registration, OAuth, MSAL | `entra-app-registration` |
+| App Insights instrumentation | `appinsights-instrumentation` |
+| Azure Local / Stack HCI / multi-rack | `azure-local` / `azure-local-multi-rack` |
+| AWS architecture / cost | `aws-solution-architect` |
+| Production incident/outage, SEV, PIR (security → `incident-response`) | `incident-commander` |
+| Runbooks, SLO/SLI/error budget/burn rate | `runbook-generator` / `slo-architect` |
+| Chaos experiment, gameday, fault injection | `chaos-engineering` |
+| Dependency CVEs/licenses, upgrade plan | `dependency-auditor` (+ `vulnerability-management`) |
+| Zero-downtime migration (DB/service/cutover) | `migration-architect` / `deprecation-and-migration` |
+| Tech debt ranking, slow endpoint / profiling | `tech-debt-tracker` / `performance-profiler` / `performance-optimization` |
+| ISO 27001 / SOC 2 audit prep | `iso27001-audit-prep` / `soc2-audit-prep` |
+| Installing an untrusted skill/plugin ("is it safe?") | `skill-security-auditor` (ALWAYS before installing) |
+| Commit / split commits / commit message / changelog | `commit-craft` / `git-workflow-and-versioning` |
+| New feature w/o spec, vague requirements | `spec-driven-development` → `planning-and-task-breakdown` → `incremental-implementation` |
+| High-stakes decision, stress-test assumptions | `doubt-driven-development` |
+| Pre-launch checklist, rollout, rollback | `shipping-and-launch` |
+| Agent context/rules setup, degraded output | `context-engineering` |
+| Build an MCP server | `mcp-builder` |
+| Write design doc / proposal / tech spec | `doc-coauthoring` |
 | Unsure which skill | `ask-matt` |
 
 ## ECC Harness Layout (`~/.claude/`)
