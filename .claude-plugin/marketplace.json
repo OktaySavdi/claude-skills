@@ -1,0 +1,13 @@
+{
+  "catalog": [
+    {
+      "id": "ecc-harness",
+      "name": "Everything Claude Code",
+      "description": "Universal AI-assisted engineering harness with agents, skills, commands, hooks, and rules",
+      "version": "1.10.0",
+      "tags": ["engineering", "devops", "kubernetes", "terraform", "python", "go", "typescript"],
+      "rating": 5,
+      "installs": 1000
+    }
+  ]
+}

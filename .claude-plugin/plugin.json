@@ -1,0 +1,19 @@
+{
+  "name": "ecc-harness",
+  "version": "1.10.0",
+  "description": "Everything Claude Code — universal AI-assisted engineering harness",
+  "author": "ECC Contributors",
+  "license": "MIT",
+  "capabilities": [
+    "agents",
+    "skills",
+    "commands",
+    "hooks",
+    "rules",
+    "contexts",
+    "examples",
+    "scripts"
+  ],
+  "minClaudeVersion": "3.5",
+  "entrypoint": "README.md"
+}
