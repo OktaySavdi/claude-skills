@@ -29,7 +29,7 @@ cd ~/claude-skills && git pull
 
 ### Use
 
-Skills load automatically. The "Skill Auto-Routing" table in `CLAUDE.md` maps what you ask to the right skill, so no `/` is needed.
+Skills load automatically. The `skill-router.sh` hook (UserPromptSubmit) reminds Claude on every prompt to check the routing table, so this works without typing `/`. The "Skill Auto-Routing" table in `CLAUDE.md` maps what you ask to the right skill, so no `/` is needed.
 
 ## Third-party skills
 
