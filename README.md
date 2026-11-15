@@ -27,9 +27,22 @@ cd ~/claude-skills && git pull
 # then re-run the copy loop above
 ```
 
+Third-party skills are pinned in `skills.lock.json` (upstream repo + path per skill). To pull the latest upstream versions:
+
+```bash
+python3 scripts/skills-update.py            # check only
+python3 scripts/skills-update.py --apply    # install into skills/ and ~/.claude/skills, then review `git diff skills/`
+```
+
+Every changed skill is scanned with `skill-security-auditor` first; a FAIL blocks it unless `--force`. Local patches are re-applied automatically: renames (`mp-tdd`, `mp-code-review`), removed `disable-model-invocation`, added `LICENSE`. Codex-only `agents/` folders are skipped. Weekly auto-update (Monday 09:00; anything blocked by the audit shows up in `~/.claude/cache/skill-update.log`):
+
+```bash
+(crontab -l 2>/dev/null; echo '0 9 * * 1 /usr/bin/python3 ~/claude-skills/scripts/skills-update.py --apply > ~/.claude/cache/skill-update.log 2>&1') | crontab -
+```
+
 ### Use
 
-Skills load automatically. The `skill-router.sh` hook (UserPromptSubmit) reminds Claude on every prompt to check the routing table, so this works without typing `/`. The "Skill Auto-Routing" table in `CLAUDE.md` maps what you ask to the right skill, so no `/` is needed.
+Skills load automatically, without typing `/`. The `skill-router` hook (UserPromptSubmit) scores every installed skill (name + description + the routing tables in `CLAUDE.md`) against each prompt and tells Claude the top 3 matches to load. Self-test: `python3 hooks/scripts/skill-router.py --test`.
 
 ## Third-party skills
 
@@ -44,10 +57,15 @@ infrastructure / DevOps / security workflow were taken. Names that clashed with 
 | [microsoft/azure-skills](https://github.com/microsoft/azure-skills) | MIT | `aks-cost-optimization`, `aks-known-issues`, `aks-network-capture`, `aks-troubleshooting`, `appinsights-instrumentation`, `azure-advisor`, `azure-cloud-migrate`, `azure-compliance`, `azure-compute`, `azure-deploy`, `azure-diagnostics`, `azure-enterprise-infra-planner`, `azure-kubernetes`, `azure-kusto`, `azure-local`, `azure-local-multi-rack`, `azure-prepare`, `azure-quotas`, `azure-reliability`, `azure-resource-lookup`, `azure-resource-visualizer`, `azure-storage`, `azure-upgrade`, `azure-validate`, `cost-analysis`, `cost-governance`, `cost-optimization`, `entra-app-registration` |
 | [addyosmani/agent-skills](https://github.com/addyosmani/agent-skills) | MIT | `context-engineering`, `deprecation-and-migration`, `doubt-driven-development`, `git-workflow-and-versioning`, `incremental-implementation`, `performance-optimization`, `planning-and-task-breakdown`, `shipping-and-launch`, `spec-driven-development` |
 | [alirezarezvani/claude-skills](https://github.com/alirezarezvani/claude-skills) | MIT | `aws-solution-architect`, `chaos-engineering`, `commit-craft`, `dependency-auditor`, `incident-commander`, `iso27001-audit-prep`, `migration-architect`, `performance-profiler`, `runbook-generator`, `skill-security-auditor`, `slo-architect`, `soc2-audit-prep`, `tech-debt-tracker` |
+| [affaan-m/ecc](https://github.com/affaan-m/ecc) | MIT | `agent-security-hardening`, `mcp-dependency-review` |
 | [anthropics/skills](https://github.com/anthropics/skills) | Apache-2.0 | `doc-coauthoring`, `mcp-builder` |
 | [multica-ai/andrej-karpathy-skills](https://github.com/multica-ai/andrej-karpathy-skills) | MIT | already installed as `karpathy-guidelines` (same content, nothing added) |
 
 ### Reviewed and skipped
+
+- **affaan-m/ecc**: the harness is already the base of this setup; the other 315 skills are off-domain or overlap (`kubernetes-patterns` → `kubernetes-expert`).
+- **obra/superpowers**: overlaps the mattpocock/addyosmani workflow skills; `using-superpowers` forces skill calls before every reply and fights the router.
+- **vercel-labs/agent-skills**: React/Vercel/web design only.
 
 - **anthropics/skills** `docx`, `pdf`, `pptx`, `xlsx`, `skill-creator`, `claude-api`: already provided by the built-in Anthropic skills. Design/brand skills are not relevant here.
 - **addyosmani/agent-skills**: TDD, API design, code review, CI/CD, security, observability and docs skills overlap what is already installed. `using-agent-skills` conflicts with the routing in `CLAUDE.md`. Frontend and browser-testing skills skipped.

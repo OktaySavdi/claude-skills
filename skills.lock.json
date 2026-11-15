@@ -1,0 +1,142 @@
+{
+  "sources": {
+    "mattpocock/skills": {
+      "ref": "HEAD",
+      "commit": "5863806dd4e15c63174bee4e7515a4256792ecfa",
+      "skills": {
+        "ask-matt": "skills/engineering/ask-matt",
+        "codebase-design": "skills/engineering/codebase-design",
+        "diagnosing-bugs": "skills/engineering/diagnosing-bugs",
+        "domain-modeling": "skills/engineering/domain-modeling",
+        "git-guardrails-claude-code": "skills/misc/git-guardrails-claude-code",
+        "grill-me": "skills/productivity/grill-me",
+        "grill-with-docs": "skills/engineering/grill-with-docs",
+        "grilling": "skills/productivity/grilling",
+        "handoff": "skills/productivity/handoff",
+        "implement": "skills/engineering/implement",
+        "implement-spec": "skills/engineering/implement-spec",
+        "improve-codebase-architecture": "skills/engineering/improve-codebase-architecture",
+        "mp-code-review": "skills/engineering/code-review",
+        "mp-tdd": "skills/engineering/tdd",
+        "pr": "skills/engineering/pr",
+        "prototype": "skills/engineering/prototype",
+        "research": "skills/engineering/research",
+        "retro": "skills/engineering/retro",
+        "setup-matt-pocock-skills": "skills/engineering/setup-matt-pocock-skills",
+        "teach": "skills/productivity/teach",
+        "to-questionnaire": "skills/productivity/to-questionnaire",
+        "to-spec": "skills/engineering/to-spec",
+        "to-tickets": "skills/engineering/to-tickets",
+        "triage": "skills/engineering/triage",
+        "wait-what": "skills/productivity/wait-what",
+        "wayfinder": "skills/engineering/wayfinder",
+        "wizard": "skills/engineering/wizard",
+        "writing-for-agents": "skills/productivity/writing-for-agents"
+      }
+    },
+    "cloudflare/security-audit-skill": {
+      "ref": "HEAD",
+      "commit": "c1c8a8c1471069fb0e188eeaff69b8e8db6564a8",
+      "skills": {
+        "cf-security-audit": "skills/security-audit"
+      }
+    },
+    "dietrichgebert/ponytail": {
+      "ref": "HEAD",
+      "commit": "96608e078b2d5ea607c5c3b8b5a54d1c1fba6846",
+      "skills": {
+        "ponytail": "skills/ponytail",
+        "ponytail-audit": "skills/ponytail-audit",
+        "ponytail-debt": "skills/ponytail-debt",
+        "ponytail-gain": "skills/ponytail-gain",
+        "ponytail-help": "skills/ponytail-help",
+        "ponytail-review": "skills/ponytail-review"
+      }
+    },
+    "microsoft/azure-skills": {
+      "ref": "HEAD",
+      "commit": "968f7bfaa01672e782dae2c6bab4fb9505ae047a",
+      "skills": {
+        "aks-cost-optimization": ".github/plugins/aks-skills/skills/aks-cost-optimization",
+        "aks-known-issues": ".github/plugins/aks-skills/skills/aks-known-issues",
+        "aks-network-capture": ".github/plugins/aks-skills/skills/aks-network-capture",
+        "aks-troubleshooting": ".github/plugins/aks-skills/skills/aks-troubleshooting",
+        "appinsights-instrumentation": "skills/appinsights-instrumentation",
+        "azure-advisor": ".github/plugins/azure-advisor/skills/azure-advisor",
+        "azure-cloud-migrate": "skills/azure-cloud-migrate",
+        "azure-compliance": "skills/azure-compliance",
+        "azure-compute": "skills/azure-compute",
+        "azure-deploy": "skills/azure-deploy",
+        "azure-diagnostics": "skills/azure-diagnostics",
+        "azure-enterprise-infra-planner": "skills/azure-enterprise-infra-planner",
+        "azure-kubernetes": "skills/azure-kubernetes",
+        "azure-kusto": "skills/azure-kusto",
+        "azure-local": ".github/plugins/azure-local-skills/skills/azure-local",
+        "azure-local-multi-rack": ".github/plugins/azure-local-skills/skills/azure-local-multi-rack",
+        "azure-prepare": "skills/azure-prepare",
+        "azure-quotas": "skills/azure-quotas",
+        "azure-reliability": "skills/azure-reliability",
+        "azure-resource-lookup": "skills/azure-resource-lookup",
+        "azure-resource-visualizer": "skills/azure-resource-visualizer",
+        "azure-storage": "skills/azure-storage",
+        "azure-upgrade": "skills/azure-upgrade",
+        "azure-validate": "skills/azure-validate",
+        "cost-analysis": ".github/plugins/azure-cost/skills/cost-analysis",
+        "cost-governance": ".github/plugins/azure-cost/skills/cost-governance",
+        "cost-optimization": ".github/plugins/azure-cost/skills/cost-optimization",
+        "entra-app-registration": "skills/entra-app-registration"
+      }
+    },
+    "addyosmani/agent-skills": {
+      "ref": "HEAD",
+      "commit": "39b723ceebf81474d0557c1fecd01eddab585563",
+      "skills": {
+        "context-engineering": "skills/context-engineering",
+        "deprecation-and-migration": "skills/deprecation-and-migration",
+        "doubt-driven-development": "skills/doubt-driven-development",
+        "git-workflow-and-versioning": "skills/git-workflow-and-versioning",
+        "incremental-implementation": "skills/incremental-implementation",
+        "performance-optimization": "skills/performance-optimization",
+        "planning-and-task-breakdown": "skills/planning-and-task-breakdown",
+        "shipping-and-launch": "skills/shipping-and-launch",
+        "spec-driven-development": "skills/spec-driven-development"
+      }
+    },
+    "alirezarezvani/claude-skills": {
+      "ref": "HEAD",
+      "commit": "08cd8a9fc86cc370e2c0d448e8171fbcfdbc5a30",
+      "skills": {
+        "aws-solution-architect": ".codex/skills/aws-solution-architect",
+        "chaos-engineering": "engineering/skills/chaos-engineering",
+        "commit-craft": "engineering/skills/commit-craft",
+        "dependency-auditor": "engineering/skills/dependency-auditor",
+        "incident-commander": ".codex/skills/incident-commander",
+        "iso27001-audit-prep": "compliance-os/skills/iso27001-audit-prep",
+        "migration-architect": "engineering/skills/migration-architect",
+        "performance-profiler": "engineering/skills/performance-profiler",
+        "runbook-generator": "engineering/skills/runbook-generator",
+        "skill-security-auditor": "engineering/skills/skill-security-auditor",
+        "slo-architect": "engineering/skills/slo-architect",
+        "soc2-audit-prep": "compliance-os/skills/soc2-audit-prep",
+        "tech-debt-tracker": "engineering/skills/tech-debt-tracker"
+      }
+    },
+    "anthropics/skills": {
+      "ref": "HEAD",
+      "commit": "1780c5e5a552fd4d1c9d6a7b0cab26b0c2bef064",
+      "skills": {
+        "doc-coauthoring": "skills/doc-coauthoring",
+        "mcp-builder": "skills/mcp-builder"
+      }
+    },
+    "affaan-m/ecc": {
+      "ref": "HEAD",
+      "commit": "d2ef2680594f9a17526a6e1a2e18b3d242c5d17b",
+      "skills": {
+        "agent-security-hardening": "skills/agent-security-hardening",
+        "mcp-dependency-review": "skills/mcp-dependency-review"
+      }
+    }
+  },
+  "checked": "2026-11-15"
+}

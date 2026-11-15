@@ -38,4 +38,11 @@ if [[ -f "tasks/todo.md" ]] && grep -q '\[ \]' "tasks/todo.md" 2>/dev/null; then
   echo "" >&2
 fi
 
+# Written weekly by scripts/skills-update.py (cron); this hook only reads it — no network here.
+readonly SKILL_UPDATES="$HOME/.claude/cache/skill-updates.txt"
+if [[ -s "$SKILL_UPDATES" ]]; then
+  echo "[Skills] $(wc -l < "$SKILL_UPDATES" | tr -d ' ') skill update(s) available — run: python3 ~/Documents/Scripts/claude-skills/scripts/skills-update.py --apply" >&2
+  echo "" >&2
+fi
+
 exit 0

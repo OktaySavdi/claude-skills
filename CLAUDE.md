@@ -134,6 +134,8 @@ a skill (publishing tickets/PRs, editing settings.json) still need user confirma
 | Tech debt ranking, slow endpoint / profiling | `tech-debt-tracker` / `performance-profiler` / `performance-optimization` |
 | ISO 27001 / SOC 2 audit prep | `iso27001-audit-prep` / `soc2-audit-prep` |
 | Installing an untrusted skill/plugin ("is it safe?") | `skill-security-auditor` (ALWAYS before installing) |
+| Agent runtime / tool gateway / autonomous worker security review | `agent-security-hardening` (+ `zero-trust-architecture`) |
+| Review .mcp.json / MCP server config, unpinned MCP packages | `mcp-dependency-review` |
 | Commit / split commits / commit message / changelog | `commit-craft` / `git-workflow-and-versioning` |
 | New feature w/o spec, vague requirements | `spec-driven-development` → `planning-and-task-breakdown` → `incremental-implementation` |
 | High-stakes decision, stress-test assumptions | `doubt-driven-development` |
